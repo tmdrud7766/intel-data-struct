@@ -1,0 +1,630 @@
+11 27  자료구조 	
+
+#define _CRT_SECURE_NO_WARNINGS
+
+
+//#if 0
+//#include <stdio.h>
+//#include <string.h>
+//
+//typedef struct _score
+//{
+//	int id;
+//	int jumsu;
+//	char name[10];
+//}SCORE;
+//
+//#define MAX_ST		20
+//
+//SCORE exam[MAX_ST];
+//
+//SCORE test[22] = { {10, 50, "kim"}, {2, 80, "lew"}, {8, 50, "lew"}, {4, 45, "lee"}, {1, 90, "song"},\
+//				   {3, 45, "kim"}, {5, 50, "song"}, {9, 100, "lee"}, {7, 75, "moon"}, {6, 90, "park"},\
+//				   {22, 0, "choi"}, {12, 28, "mo"}, {18, 51, "lee"}, {14, 43, "lee"}, {11, 91, "min"},\
+//				   {13, 41, "kim"}, {15, 15, "kong"}, {19, 100, "park"}, {17, 72, "seo"}, {16, 99, "lim"},\
+//				   {20, 98, "do"}, {21, 100, "kong" }, };
+//
+//void Make_Test_Data(int n)
+//{
+//	int i;
+//
+//	for (i = 0; i < n; i++)
+//	{
+//		exam[i] = test[i];
+//	}
+//}
+//
+//#endif
+//
+//
+//#if 1
+//
+//#include <stdio.h>
+//
+//typedef struct _score
+//{
+//	int id;
+//	int jumsu;
+//	char name[10];
+//}SCORE;
+//
+//#define MAX_ST		20
+//
+//SCORE exam[MAX_ST];
+//
+//SCORE test[22] = { {10, 50, "kim"}, {2, 80, "lew"}, {8, 50, "lew"}, {4, 45, "lee"}, {1, 90, "song"},\
+//				   {3, 45, "kim"}, {5, 50, "song"}, {9, 100, "lee"}, {7, 75, "moon"}, {6, 90, "park"},\
+//				   {22, 0, "choi"}, {12, 28, "mo"}, {18, 51, "lee"}, {14, 43, "lee"}, {11, 91, "min"},\
+//				   {13, 41, "kim"}, {15, 15, "kong"}, {19, 100, "park"}, {17, 72, "seo"}, {16, 99, "lim"},\
+//				   {20, 98, "do"}, {21, 100, "kong" }, };
+//
+//void Make_Test_Data(int n)
+//{
+//	int i;
+//
+//	for (i = 0; i < n; i++)
+//	{
+//		exam[i] = test[i];
+//	}
+//}
+//
+//int Print_All_Data(void)
+//{
+//	int i = 0;
+//
+//
+//	for (;;){
+//
+//
+//
+//		if (exam[i].id == 0)
+//			break;
+//
+//		     printf("[%d] ID=%d, NAME=%s, SCORE=%d\n",i, exam[i].id, exam[i].name, exam
+//				[i].jumsu);
+//			 i++;
+//	}
+//	return i;
+//		 
+//	
+//}
+//
+//
+//void main(void)
+//{
+//	int r, n;
+//	scanf("%d", &n);
+//	Make_Test_Data(n);
+//	r = Print_All_Data();
+//	printf("%d\n", r);
+//}
+//
+//
+//#endif
+//
+
+
+
+//#include <stdio.h>
+//
+//typedef struct _score
+//{
+//	int id;
+//	int jumsu;
+//	char name[10];
+//}SCORE;
+//
+//#define MAX_ST		20
+//
+//SCORE exam[MAX_ST];
+//
+//SCORE test[22] = { {10, 50, "kim"}, {2, 80, "lew"}, {8, 50, "lew"}, {4, 45, "lee"}, {1, 90, "song"},\
+//				   {3, 45, "kim"}, {5, 50, "song"}, {9, 100, "lee"}, {7, 75, "moon"}, {6, 90, "park"},\
+//				   {22, 0, "choi"}, {12, 28, "mo"}, {18, 51, "lee"}, {14, 43, "lee"}, {11, 91, "min"},\
+//				   {13, 41, "kim"}, {15, 15, "kong"}, {19, 100, "park"}, {17, 72, "seo"}, {16, 99, "lim"},\
+//				   {20, 98, "do"}, {21, 100, "kong" }, };
+//
+//void Make_Test_Data(int n)
+//{
+//	int i;
+//
+//	for (i = 0; i < n; i++)
+//	{
+//		exam[i] = test[i];
+//	}
+//}
+//
+//int Print_Data(int no)
+//{
+//	
+//
+//
+//
+//	if (exam[no].id == 0)  return -1;
+//
+//		printf("ID=%d, NAME=%s, SCORE=%d\n", exam[no].id, exam[no].name, exam[no].jumsu);
+//
+//		return 1;
+//
+//	
+//
+//
+//}
+//
+//void main(void)
+//{
+//	int r, n, m;
+//
+//	scanf("%d %d", &n, &m);
+//	Make_Test_Data(n);
+//	r = Print_Data(m);
+//	printf("%d\n", r);
+//}
+
+
+//#include <stdio.h>
+//
+//typedef struct _score
+//{
+//	int id;
+//	int jumsu;
+//	char name[10];
+//}SCORE;
+//
+//#define MAX_ST		20
+//
+//SCORE exam[MAX_ST];
+//
+//SCORE test[22] = { {10, 50, "kim"}, {2, 80, "lew"}, {8, 50, "lew"}, {4, 45, "lee"}, {1, 90, "song"},\
+//				   {3, 45, "kim"}, {5, 50, "song"}, {9, 100, "lee"}, {7, 75, "moon"}, {6, 90, "park"},\
+//				   {22, 0, "choi"}, {12, 28, "mo"}, {18, 51, "lee"}, {14, 43, "lee"}, {11, 91, "min"},\
+//				   {13, 41, "kim"}, {15, 15, "kong"}, {19, 100, "park"}, {17, 72, "seo"}, {16, 99, "lim"},\
+//				   {20, 98, "do"}, {21, 100, "kong" }, };
+//
+//void Make_Test_Data(int n)
+//{
+//	int i;
+//
+//	for (i = 0; i < n; i++)
+//	{
+//		exam[i] = test[i];
+//	}
+//}
+//
+//int Print_All_Data(void)
+//{
+//	int i;
+//
+//	for (i = 0; i < MAX_ST; i++)
+//	{
+//		if (exam[i].id == 0) break;
+//		printf("[%d] ID=%d, NAME=%s, SCORE=%d\n", i, exam[i].id, exam[i].name, exam[i].jumsu);
+//	}
+//
+//	return i;
+//}
+//
+//int Print_Data(int no)
+//{
+//	if (exam[no].id == 0) return -1;
+//	printf("ID=%d, NAME=%s, SCORE=%d\n", exam[no].id, exam[no].name, exam[no].jumsu);
+//	return 1;
+//}
+//
+//int Count_Data(void)
+//{
+//	int i;
+//
+//	for (i = 0; i < MAX_ST; i++)
+//	{
+//		if (exam[i].id == 0) break;
+//	}
+//
+//	return i;
+//}
+//
+//int Create_Data(SCORE * p)
+//{
+//	scanf("%d %s %d", &p->id, p->name, &p->jumsu);
+//
+//	return 1;
+//}
+//
+//int Insert_Data(SCORE * p)
+//{
+//
+//	int i;
+//
+//	for (i = 0; i < MAX_ST; i++) {
+//
+//
+//		if (exam[i].id  ==0 )
+//		{
+//
+//			exam[i] = *p;
+//
+//			return i;
+//
+//		}
+//		if (exam[i].id == p->id) {
+//
+//			return -2;
+//		}
+//
+//	}
+//
+//	return -1;
+//
+//
+//
+//}
+//
+//void main(void)
+//{
+//	int i, n;
+//
+//	scanf("%d", &n);
+//
+//	for (i = 0; i < n; i++)
+//	{
+//		printf("%d\n", Insert_Data(&test[i]));
+//		printf("%d\n", Print_All_Data());
+//	}
+//
+//	printf("%d\n", Insert_Data(&test[i - 1]));
+//	printf("%d\n", Print_All_Data());
+//}
+//
+//
+
+//#if 2
+//#include <stdio.h>
+//
+//typedef struct _score
+//{
+//	int id;
+//	int jumsu;
+//	char name[10];
+//}SCORE;
+//
+//#define MAX_ST		20
+//
+//SCORE exam[MAX_ST];
+//
+//SCORE test[22] = { {10, 50, "kim"}, {2, 80, "lew"}, {8, 50, "lew"}, {4, 45, "lee"}, {1, 90, "song"},\
+//				   {3, 45, "kim"}, {5, 50, "song"}, {9, 100, "lee"}, {7, 75, "moon"}, {6, 90, "park"},\
+//				   {22, 0, "choi"}, {12, 28, "mo"}, {18, 51, "lee"}, {14, 43, "lee"}, {11, 91, "min"},\
+//				   {13, 41, "kim"}, {15, 15, "kong"}, {19, 100, "park"}, {17, 72, "seo"}, {16, 99, "lim"},\
+//				   {20, 98, "do"}, {21, 100, "kong" }, };
+//
+//void Make_Test_Data(int n)
+//{
+//	int i;
+//
+//	for (i = 0; i < n; i++)
+//	{
+//		exam[i] = test[i];
+//	}
+//}
+//
+//int Print_All_Data(void)
+//{
+//	int i;
+//
+//	for (i = 0; i < MAX_ST; i++)
+//	{
+//		if (exam[i].id == 0) break;   //사번값이 0 이면 출력 x
+//		printf("[%d] ID=%d, NAME=%s, SCORE=%d\n", i, exam[i].id, exam[i].name, exam[i].jumsu);
+//	}
+//
+//	return i;
+//}
+//
+//int Print_Data(int no)
+//{
+//	if (exam[no].id == 0) return -1;
+//	printf("ID=%d, NAME=%s, SCORE=%d\n", exam[no].id, exam[no].name, exam[no].jumsu);
+//	return 1;
+//}
+//
+//int Count_Data(void)
+//{
+//	int i;
+//
+//	for (i = 0; i < MAX_ST; i++)
+//	{
+//		if (exam[i].id == 0) break;
+//	}
+//
+//	return i;
+//}
+//
+//int Create_Data(SCORE * p)
+//{
+//	scanf("%d %s %d", &p->id, p->name, &p->jumsu);
+//
+//	return 1;
+//}
+//
+//int Insert_Data(SCORE * p)
+//{
+//	int i;
+//
+//	for (i = 0; i < MAX_ST; i++)
+//	{
+//		if (exam[i].id == 0)
+//		{
+//			exam[i] = (*p);
+//			return i;
+//		}
+//
+//		if (exam[i].id == p->id)
+//		{
+//			return -2;
+//		}
+//	}
+//
+//	return -1;
+//}
+//
+////int Delete_Data(int id)
+////{
+////	int i;  //현재상태 i 값 
+////	int j;  //삭제되고 이동할 j
+////
+////	if (exam[0].id == 0)   //맨처음값이 0이면 다 0으로 채워진거라 간주
+////	{
+////		return -2;
+////	}
+////
+////	for (i = 0; i < MAX_ST; i++)
+////	{
+////		if (exam[i].id == id)  //id 입력받은아이디 id[]
+////		{
+////			for (j = i; j < (MAX_ST - 1); j++)   //쓰레기값을 못가져오게 설정 MAX_ST - 1
+////			{
+////				if (exam[j + 1].id == 0)  //그다음값이 없으면 
+////				{
+////					exam[j].id = 0;
+////					return i;
+////				}
+////
+////				exam[j] = exam[j + 1];
+////			}
+////
+////			exam[j].id = 0;
+////			return i;  // 삭제된 항목의 인덱스를 반환
+////		}
+////	}
+////
+////	return -1;  //아이디값이 다르면    380줄에서 검사
+////}
+//
+//
+//
+//
+//int Delete_Data(int id) {
+//
+//	int  i,j;
+//
+//	if (exam[0].id == 0) {
+//
+//		return -2;
+//	}
+//		
+//   for(int i=0;i<MAX_ST;i++){
+//    if (exam[i].id == id) {
+//		for (j = i; j < (MAX_ST - 1); j++) {
+//
+//			exam[j] = exam[j + 1];     // 초깃값 만 설정j = i 면 안되는 이유는 이중 for문 
+//
+//
+//	
+//
+//		}
+//		exam[j].id = 0;
+//		return i;
+//	   
+//
+//    }
+//  
+//
+//   }return -1;
+//
+//	
+//
+//
+//
+//}
+//
+//
+//
+//
+//
+//int id[] = { 10,1,8,9,2,4,11 };
+//
+//void main(void)
+//{
+//	int i;
+//
+//	Make_Test_Data(5);  //exam[5 ] 생성 
+//	printf("Data Count = %d\n", Print_All_Data());   //exam[5] 까지의데이터 출력
+//
+//	for (i = 0; i < 7; i++)
+//	{
+//		printf("Deleted Element = %d\n", Delete_Data(id[i]));
+//		printf("Data Count = %d\n", Print_All_Data());
+//	}
+//}
+//
+//
+//#endif	
+
+
+
+
+#include <stdio.h>
+
+typedef struct _score
+{
+	int id;
+	int jumsu;
+	char name[10];
+}SCORE;
+
+#define MAX_ST      20
+
+SCORE exam[MAX_ST];
+
+SCORE test[22] = { {10, 50, "kim"}, {2, 80, "lew"}, {8, 50, "lew"}, {4, 45, "lee"}, {1, 90, "song"},\
+				   {3, 45, "kim"}, {5, 50, "song"}, {9, 100, "lee"}, {7, 75, "moon"}, {6, 90, "park"},\
+				   {22, 0, "choi"}, {12, 28, "mo"}, {18, 51, "lee"}, {14, 43, "lee"}, {11, 91, "min"},\
+				   {13, 41, "kim"}, {15, 15, "kong"}, {19, 100, "park"}, {17, 72, "seo"}, {16, 99, "lim"},\
+				   {20, 98, "do"}, {21, 100, "kong" }, };
+
+void Make_Test_Data(int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		exam[i] = test[i];
+	}
+}
+
+int Print_All_Data(void)
+{
+	int i;
+
+	for (i = 0; i < MAX_ST; i++)
+	{
+		if (exam[i].id == 0) break;
+		printf("[%d] ID=%d, NAME=%s, SCORE=%d\n", i, exam[i].id, exam[i].name, exam[i].jumsu);
+	}
+
+	return i;
+}
+
+int Print_Data(int no)
+{
+	if (exam[no].id == 0) return -1;
+	printf("ID=%d, NAME=%s, SCORE=%d\n", exam[no].id, exam[no].name, exam[no].jumsu);
+	return 1;
+}
+
+int Count_Data(void)
+{
+	int i;
+
+	for (i = 0; i < MAX_ST; i++)
+	{
+		if (exam[i].id == 0) break;
+	}
+
+	return i;
+}
+
+int Create_Data(SCORE * p)
+{
+	scanf("%d %s %d", &p->id, p->name, &p->jumsu);
+
+	return 1;
+}
+
+int Insert_Data(SCORE * p)
+{
+	int i;
+
+	for (i = 0; i < MAX_ST; i++)
+	{
+		if (exam[i].id == 0)
+		{
+			exam[i] = (*p);
+			return i;
+		}
+
+		if (exam[i].id == p->id)
+		{
+			return -2;
+		}
+	}
+
+	return -1;
+}
+
+int Delete_Data(int id)
+{
+	int i;
+	int j;
+
+	if (exam[0].id == 0)
+	{
+		return -2;
+	}
+
+	for (i = 0; i < MAX_ST; i++)
+	{
+		if (exam[i].id == id)
+		{
+			for (j = i; j < (MAX_ST - 1); j++)
+			{
+				if (exam[j + 1].id == 0)
+				{
+					exam[j].id = 0;
+					return i;
+				}
+
+				exam[j] = exam[j + 1];
+			}
+
+			exam[j].id = 0;
+			return i;
+		}
+	}
+
+	return -1;
+}
+
+int Search_Complete_Data(SCORE *p) {
+	int i;
+
+	// exam[0].id가 0이면 데이터가 없다는 의미로 -2를 반환
+	if (exam[0].id == 0) {
+		return -2;
+	}
+
+	// exam 배열을 순차적으로 탐색
+	for (i = 0; i < MAX_ST; i++) {
+		// exam[i].id가 0이면 더 이상 유효한 데이터가 없으므로 -1 반환
+		if (exam[i].id == 0) return -1;
+
+		// id와 name을 비교하여 동일한 데이터 찾기
+		if (exam[i].id == p->id) {
+			if (!strcmp(exam[i].name, p->name)) return i;
+		}
+	}
+
+	// 일치하는 데이터가 없으면 -1 반환
+	return -1;
+}
+SCORE tmp[] = { {4, 45, "lee"} , {10, 50, "kim"}, {8, 50, "lew"}, {2, 80, "law"}, {2, 81, "lew"} };
+
+void main(void)
+{
+	int i;
+
+	Make_Test_Data(4);
+	printf("Printed Data Count = %d\n", Print_All_Data());
+
+	for (i = 0; i < 5; i++)
+	{
+		printf("Searched Element = %d\n", Search_Complete_Data(&tmp[i]));
+	}
+
+	for (i = 0; i < 4; i++)
+	{
+		Delete_Data(tmp[i].id);
+	}
+
+	printf("Searched Element = %d\n", Search_Complete_Data(&tmp[0]));
+}
